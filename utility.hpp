@@ -27,7 +27,7 @@ void banner();
 // -----------------------------------------------------------------------------
 //  Prints termination message.
 void bye();
-
+void ferhat();
 // -----------------------------------------------------------------------------
 //  Generates a separator string
 std::string separator();
