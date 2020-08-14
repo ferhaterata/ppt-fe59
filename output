@@ -1,0 +1,169 @@
+$ make clean
+rm -f main.o controller.o inventory.o part.o utility.o repair
+$ make debug
+g++ -O1 -g -Wall -Wextra -Wnon-virtual-dtor -Wpedantic -Wnull-dereference -std=c++17 -DDEBUG   -c -o main.o main.cpp
+g++ -O1 -g -Wall -Wextra -Wnon-virtual-dtor -Wpedantic -Wnull-dereference -std=c++17 -DDEBUG   -c -o controller.o controller.cpp
+g++ -O1 -g -Wall -Wextra -Wnon-virtual-dtor -Wpedantic -Wnull-dereference -std=c++17 -DDEBUG   -c -o inventory.o inventory.cpp
+g++ -O1 -g -Wall -Wextra -Wnon-virtual-dtor -Wpedantic -Wnull-dereference -std=c++17 -DDEBUG   -c -o part.o part.cpp
+g++ -O1 -g -Wall -Wextra -Wnon-virtual-dtor -Wpedantic -Wnull-dereference -std=c++17 -DDEBUG   -c -o utility.o utility.cpp
+g++ -o repair main.o controller.o inventory.o part.o utility.o
+$ ./repair tests/inventory1.in inventory1.out
+
+---------------------------------------------------------------
+        Ferhat Erata
+        CPSC 427/527
+        Sat Dec 14 05:00:03 2019 EST
+---------------------------------------------------------------
+
+AWF 5 0.45
+MJF 3 98.65
+FDR 5 75.50
+RBW 3 69.00
+GBS 1 92.74
+PLK 16 37.88
+ABA 24 56.00
+PDB 71 86.00
+JBK 1 24.00
+GLD 89 53.00
+PRD 68 100.00
+HST 79 7.00
+ABC 82 6.00
+AEF 89 1405.03
+ALA 105 1405.00
+PLK 5 37.00
+ZZZ 0 0.00
+GLD 89 53.00
+---------------------------------------------------------------
+
+ABA 24 56.00
+ABC 82 6.00
+AEF 89 1405.03
+ALA 105 1405.00
+AWF 5 0.45
+FDR 5 75.50
+GBS 1 92.74
+GLD 89 53.00
+GLD 89 53.00
+HST 79 7.00
+JBK 1 24.00
+MJF 3 98.65
+PDB 71 86.00
+PLK 16 37.88
+PLK 5 37.00
+PRD 68 100.00
+RBW 3 69.00
+ZZZ 0 0.00
+
+---------------------------------------------------------------
+
+ABA 24 56.00
+ABC 82 6.00
+AEF 89 1405.03
+ALA 105 1405.00
+AWF 5 0.45
+FDR 5 75.50
+GBS 1 92.74
+GLD 178 53.00
+HST 79 7.00
+JBK 1 24.00
+MJF 3 98.65
+PDB 71 86.00
+PLK 21 37.88
+PRD 68 100.00
+RBW 3 69.00
+ZZZ 0 0.00
+
+        The inventory file is successfully repaired.
+
+---------------------------------------------------------------
+Normal termination.
+$ make clean
+rm -f main.o controller.o inventory.o part.o utility.o repair
+$ make
+g++ -O1 -g -Wall -Wextra -Wnon-virtual-dtor -Wpedantic -Wnull-dereference -std=c++17   -c -o main.o main.cpp
+g++ -O1 -g -Wall -Wextra -Wnon-virtual-dtor -Wpedantic -Wnull-dereference -std=c++17   -c -o controller.o controller.cpp
+g++ -O1 -g -Wall -Wextra -Wnon-virtual-dtor -Wpedantic -Wnull-dereference -std=c++17   -c -o inventory.o inventory.cpp
+g++ -O1 -g -Wall -Wextra -Wnon-virtual-dtor -Wpedantic -Wnull-dereference -std=c++17   -c -o part.o part.cpp
+g++ -O1 -g -Wall -Wextra -Wnon-virtual-dtor -Wpedantic -Wnull-dereference -std=c++17   -c -o utility.o utility.cpp
+g++ -o repair main.o controller.o inventory.o part.o utility.o
+$ ./repair tests/inventory1.in inventory1.out
+
+---------------------------------------------------------------
+        Ferhat Erata
+        CPSC 427/527
+        Sat Dec 14 05:01:08 2019 EST
+---------------------------------------------------------------
+
+        The inventory file is successfully repaired.
+
+---------------------------------------------------------------
+Normal termination.
+$ ./repair tests/inventory2.in inventory2.out
+
+---------------------------------------------------------------
+        Ferhat Erata
+        CPSC 427/527
+        Sat Dec 14 05:01:57 2019 EST
+---------------------------------------------------------------
+
+        The inventory file is successfully repaired.
+
+---------------------------------------------------------------
+Normal termination.
+$ ./repair tests/inventory3.in inventory3.out
+
+---------------------------------------------------------------
+        Ferhat Erata
+        CPSC 427/527
+        Sat Dec 14 05:02:22 2019 EST
+---------------------------------------------------------------
+
+        The inventory file is successfully repaired.
+
+---------------------------------------------------------------
+Normal termination.
+$ ./repair tests/inventory4.in inventory4.out
+
+---------------------------------------------------------------
+        Ferhat Erata
+        CPSC 427/527
+        Sat Dec 14 05:02:35 2019 EST
+---------------------------------------------------------------
+
+
+Catching IO error...
+
+        I/O error or bad data during extraction!
+
+---------------------------------------------------------------
+Normal termination.
+$ ./repair tests/inventory5.in inventory5.out
+
+---------------------------------------------------------------
+        Ferhat Erata
+        CPSC 427/527
+        Sat Dec 14 05:02:51 2019 EST
+---------------------------------------------------------------
+
+
+Catching IO error...
+
+        I/O error or bad data during extraction!
+
+---------------------------------------------------------------
+Normal termination.
+$ ./repair tests/inventory6.in inventory6.out
+
+---------------------------------------------------------------
+        Ferhat Erata
+        CPSC 427/527
+        Sat Dec 14 05:03:18 2019 EST
+---------------------------------------------------------------
+
+
+Catching IO error...
+
+        (JBK -1 24.00): quantity cannot be negative!
+
+---------------------------------------------------------------
+Normal termination.
